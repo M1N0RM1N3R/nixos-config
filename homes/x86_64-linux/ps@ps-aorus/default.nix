@@ -6,7 +6,7 @@
   home = {
     packages = with pkgs; [
       unstable.osu-lazer-bin
-      lutris
+      unstable.lutris
       vesktop
       signal-desktop
       pika-backup
