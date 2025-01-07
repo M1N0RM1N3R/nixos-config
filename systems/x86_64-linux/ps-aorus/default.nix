@@ -12,7 +12,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    initrd.luks.devices."luks-4b21f374-5e2c-43ec-94c0-f6d07e9a88f2".device = "/dev/disk/by-uuid/4b21f374-5e2c-43ec-94c0-f6d07e9a88f2";
+    initrd.luks.devices."luks-618963c0-5e1d-422b-8467-626d6ca3bd58".device = "/dev/disk/by-uuid/618963c0-5e1d-422b-8467-626d6ca3bd58";
   };
   optionalModules = {
     kde.enable = true;
