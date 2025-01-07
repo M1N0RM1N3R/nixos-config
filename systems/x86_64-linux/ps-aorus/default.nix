@@ -63,8 +63,4 @@
     cudatoolkit
   ];
   system.stateVersion = "24.11";
-
-  # Fix for a weird issue I've been having with Pika Backup(?)
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.sddm.enableGnomeKeyring = true;
 }

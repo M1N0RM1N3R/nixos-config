@@ -9,12 +9,12 @@
       unstable.lutris
       vesktop
       signal-desktop
-      pika-backup
       audacity
       kdePackages.kdenlive
       keepassxc
       protonvpn-gui
       solaar
+      vorta
     ];
     pointerCursor = {
       package = pkgs.posy-cursors;
