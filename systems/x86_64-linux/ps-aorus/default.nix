@@ -47,14 +47,17 @@
   sops = {
     age.keyFile = "/home/ps/.config/sops/age/keys.txt";
   };
-  hardware.nvidia.prime = {
-    sync.enable = true;
+  hardware = {
+    nvidia.prime = {
+      sync.enable = true;
 
-    # WARNING: The bus IDs for your specific setup may vary from mine!
-    # DO NOT blindly copy this and expect it to work!
-    # Learn more: https://nixos.wiki/wiki/Nvidia#Configuring_Optimus_PRIME:_Bus_ID_Values_.28Mandatory.29
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
+      # WARNING: The bus IDs for your specific setup may vary from mine!
+      # DO NOT blindly copy this and expect it to work!
+      # Learn more: https://nixos.wiki/wiki/Nvidia#Configuring_Optimus_PRIME:_Bus_ID_Values_.28Mandatory.29
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+    bluetooth.enable = true;
   };
   environment.systemPackages = with pkgs; [
     cudatoolkit
