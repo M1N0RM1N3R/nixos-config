@@ -6,7 +6,7 @@
   system,
   ...
 }: let
-  pkg = pkgs.unstable.vscodium;
+  pkg = pkgs.vscodium;
 in
   lib.internal.mkOptionalModule config "vscode" {
     home.shellAliases = {
@@ -15,7 +15,6 @@ in
     programs.vscode = {
       enable = true;
       package = pkg;
-      userSettings = lib.importJSON ./vscode.settings.json;
       extensions = with inputs.nix-vscode-extensions.extensions.${system}.vscode-marketplace; [
         # From `codium --list-extensions` on my previous system, with broken/missing extensions commented out
         aaron-bond.better-comments
