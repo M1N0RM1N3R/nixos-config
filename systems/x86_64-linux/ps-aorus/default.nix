@@ -19,7 +19,7 @@
     pipewire.enable = true;
     tailscale.enable = true;
     nvidia.enable = true;
-    syncthing.enable = true;
+    #syncthing.enable = true;
   };
   networking = {
     hostName = "ps-aorus";

@@ -15,6 +15,7 @@
       protonvpn-gui
       solaar
       vorta
+      libreoffice-qt6
     ];
     pointerCursor = {
       package = pkgs.posy-cursors;
@@ -36,6 +37,12 @@
       ];
     };
   };
-  services.arrpc.enable = true;
+  services = {
+    arrpc.enable = true;
+    syncthing = {
+      enable = true;
+      tray.enable = true;
+    };
+  };
   home.stateVersion = "24.11";
 }

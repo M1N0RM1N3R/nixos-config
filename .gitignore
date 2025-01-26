@@ -1,3 +1,5 @@
 .*
 !.gitignore
 !.sops.yaml
+result
+*.log
