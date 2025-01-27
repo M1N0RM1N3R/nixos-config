@@ -64,6 +64,6 @@
   users.users = {
     ps.initialPassword = "default";
     deploy.initialPassword = "default";
-  }
+  };
   system.stateVersion = "24.11";
 }
