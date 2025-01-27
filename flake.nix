@@ -17,6 +17,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -32,7 +36,7 @@
           "dotnet-sdk-6.0.428" # https://github.com/NixOS/nixpkgs/issues/365975
         ];
       };
-      systems.modules.nixos = with inputs; [sops-nix.nixosModules.sops];
+      systems.modules.nixos = with inputs; [sops-nix.nixosModules.sops disko.nixosModules.disko];
       homes.modules = with inputs; [sops-nix.homeManagerModules.sops];
     };
 }

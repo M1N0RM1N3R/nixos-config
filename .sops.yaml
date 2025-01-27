@@ -4,4 +4,7 @@ creation_rules:
   - path_regex: SECRETS/[^/]+\.yaml$
     key_groups:
       - age:
-        - *admin_ps
+          - *admin_ps
+  - path_regex: SECRETS/ps-userver.yaml$
+    key_groups:
+      - age: [] # TODO: add host key for userver

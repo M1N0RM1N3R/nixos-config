@@ -1,6 +1,6 @@
 # PickSquid's personal NixOS config
 
-Neĝas! This is the configuration I use across everything I run [NixOS] on. (currently just my primary mobile workstation, but others are in logistics as I type)
+Neĝas! This is the configuration I use across everything I run [NixOS] on.
 After a previous aborted migration due to issue #1, I slowly tore down and rebuilt the config from the ground up around [Snowfall]--an opinionated framework for Nix flakes--in January 2025. (new year, new OS, amirite?)
 
 ## Features
@@ -20,16 +20,21 @@ The config uses SOPS to safely store secrets within the configuration repo.
 
 The flake includes a [dev shell](./shells/default/default.nix) with a variety of tools that you may find useful for bootstrapping and maintenance.
 
-## Setup
+### Disko
 
-1. Install NixOS however you find easiest. (Calamares GUI, CLI, what-have-you)
-2. Clone this repo somewhere convenient on your system and `cd` into it. (I just put it right in my home directory)
-3. Run `nix develop --extra-experimental-features nix-command --extra-experimental-features flakes` to enter the dev shell.
-4. Run `nh os switch . -H <hostname> -- --extra-experimental-features nix-command --extra-experimental-features flakes` to bootstrap the config.
-5. ???
-6. Profit!
+System disk partitions are managed by [Disko] for one-click installation on supported systems.
 
-After bootstrapping, all you have to do to update your system is run `nh os switch ~/nixos-config`--the `nix-command` and `flakes` Nix features are enabled in the `std` module.
+## Systems
+
+### ps-aorus
+
+My primary mobile workstation--a GIGABYTE Aorus 15G WB, with an i7-10750H and 2070 Max-Q.
+This system has a password-encrypted root partition, which I'm working on supporting in my internal lib.
+
+### ps-userver
+
+My home server and NAS--an HP ProLiant MicroServer, currently populated with 4x500GB HDDs, configured in a 3-disk RAID-5 array for data and the remaining disk used for boot and applications.
 
 [NixOS]: https://nixos.org/
 [Snowfall]: https://snowfall.org/guides/lib/quickstart/
+[Disko]: https://github.com/nix-community/disko
