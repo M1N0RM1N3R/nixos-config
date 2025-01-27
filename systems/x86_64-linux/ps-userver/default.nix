@@ -36,7 +36,7 @@
     };
   };
   boot.loader.grub = {
-    device = "/dev/sda";
+    devices = ["/dev/sda"];
     enable = true;
   };
   optionalModules = {
