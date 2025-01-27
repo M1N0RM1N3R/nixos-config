@@ -35,13 +35,13 @@
       };
     };
   };
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    device = "/dev/sda";
+    enable = true;
   };
   optionalModules = {
     managed-passwords = {
-      enable = true;
+      #enable = true; # TODO: fix managed-passwords module
       forUsers = ["ps" "deploy"];
     };
     ssh.enable = true;
@@ -61,5 +61,9 @@
   snowfallorg.users.deploy = {
     admin = false;
   };
+  users.users = {
+    ps.initialPassword = "default";
+    deploy.initialPassword = "default";
+  }
   system.stateVersion = "24.11";
 }
