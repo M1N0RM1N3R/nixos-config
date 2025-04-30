@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> This repo is no longer actively used since I don't use NixOS on any devices.
+> I will keep it archived for now, unless and until I begin using NixOS again.
+> Nix is a very cool piece of software, but my needs have shifted to where I believe I am best served by Windows and TrueNAS SCALE.
+
 # PickSquid's personal NixOS config
 
 Neĝas! This is the configuration I use across everything I run [NixOS] on.
